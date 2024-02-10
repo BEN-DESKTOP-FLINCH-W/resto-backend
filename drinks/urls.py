@@ -25,6 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('drinks/', views.drink_list),
     path('drinks/<int:id>', views.drink_detail),
+    path('resto/', views.add_user),
+    path('resto/<str:email>/<str:password>', views.auth_user),
+    path('restaurants/', views.restaurant_list),
+    path('restaurants/<int:id>', views.restaurant_detail),
+
 ]
 
 urlpatterns=format_suffix_patterns(urlpatterns)
